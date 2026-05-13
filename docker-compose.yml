@@ -1,0 +1,21 @@
+services:
+  web:
+    build:
+      context: .
+      target: dev
+    container_name: whodo-web
+    ports:
+      - "5174:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_PROXY_TARGET=http://api:8080
+      - CHOKIDAR_USEPOLLING=true
+    networks:
+      - whodo
+
+networks:
+  whodo:
+    external: true
+    name: whodo

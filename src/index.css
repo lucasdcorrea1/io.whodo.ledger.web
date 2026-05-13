@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11', 'ss01';
+  color-scheme: dark;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  background-image: radial-gradient(80% 50% at 50% -10%, rgba(168, 85, 247, 0.08) 0%, rgba(168, 85, 247, 0) 70%);
+  background-attachment: fixed;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Smooth focus ring */
+*:focus-visible {
+  outline: none;
+}
+
+/* Better scrollbar in dark mode */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(225 12% 20%);
+  border-radius: 8px;
+  border: 2px solid hsl(225 15% 6%);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(225 12% 30%);
+}
+
+/* Recharts dark tooltip */
+.recharts-tooltip-wrapper {
+  z-index: 50 !important;
+  pointer-events: none;
+}
+.recharts-default-tooltip {
+  background-color: hsl(225 14% 22%) !important;
+  border: 1px solid hsl(225 12% 32%) !important;
+  border-radius: 10px !important;
+  padding: 10px 12px !important;
+  font-size: 12px !important;
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(168, 85, 247, 0.1) !important;
+}
+.recharts-tooltip-label {
+  color: hsl(0 0% 98%) !important;
+  font-weight: 700 !important;
+  margin-bottom: 6px !important;
+  font-size: 12px !important;
+}
+.recharts-tooltip-item-list {
+  padding: 0 !important;
+}
+.recharts-tooltip-item {
+  color: hsl(0 0% 95%) !important;
+  padding: 2px 0 !important;
+  font-weight: 600 !important;
+}
+.recharts-tooltip-item-name,
+.recharts-tooltip-item-separator,
+.recharts-tooltip-item-value,
+.recharts-tooltip-item-unit {
+  color: hsl(0 0% 95%) !important;
+}
+.recharts-cartesian-axis-tick text {
+  fill: hsl(225 14% 70%) !important;
+}
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: hsl(225 12% 18%) !important;
+}
+.recharts-surface {
+  overflow: visible !important;
+}
