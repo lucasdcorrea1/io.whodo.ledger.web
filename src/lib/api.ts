@@ -4,8 +4,12 @@ export class ApiError extends Error {
   }
 }
 
+// In dev the Vite proxy serves /api → backend, so we can use a relative URL.
+// In prod (GH Pages, etc.) VITE_API_BASE_URL points to the deployed backend.
+const API_BASE = ((import.meta as any).env?.VITE_API_BASE_URL as string | undefined) || '/api'
+
 async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
-  const res = await fetch(`/api${path}`, {
+  const res = await fetch(`${API_BASE}${path}`, {
     ...init,
     credentials: 'include',
     headers: {

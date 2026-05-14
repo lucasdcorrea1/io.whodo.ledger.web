@@ -14,7 +14,9 @@ html, body, #root {
 
 body {
   @apply bg-background text-foreground antialiased;
-  background-image: radial-gradient(80% 50% at 50% -10%, rgba(168, 85, 247, 0.08) 0%, rgba(168, 85, 247, 0) 70%);
+  background-image:
+    radial-gradient(60% 40% at 18% 0%, rgba(168, 85, 247, 0.08) 0%, rgba(168, 85, 247, 0) 70%),
+    radial-gradient(60% 40% at 100% 100%, rgba(168, 85, 247, 0.04) 0%, rgba(168, 85, 247, 0) 70%);
   background-attachment: fixed;
 }
 
@@ -36,12 +38,12 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(225 12% 20%);
+  background: hsl(225 14% 24%);
   border-radius: 8px;
-  border: 2px solid hsl(225 15% 6%);
+  border: 2px solid hsl(225 18% 8%);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(225 12% 30%);
+  background: hsl(225 14% 34%);
 }
 
 /* Recharts dark tooltip */

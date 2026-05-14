@@ -2,6 +2,10 @@
 
 Front-end do **Whodo Ledger**, app de finanças pessoais da marca Whodo. SPA que conversa com a API em `io.whodo.ledger.api`.
 
+🌐 **Live:** https://lucasdcorrea1.github.io/io.whodo.ledger.web/
+
+> A interface está publicada, mas o backend (`io.whodo.ledger.api`) ainda não está em produção — login e dados ainda não funcionam no ar. Para usar com dados reais, rode local com Docker (veja abaixo).
+
 ## Stack
 
 - **React 19** + **TypeScript** + **Vite**
